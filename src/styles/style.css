@@ -1,3 +1,42 @@
 .test{
-  color: red;
+  color: green;
+}
+
+.container {
+  max-width: 800px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usage-rules{
+  background-color: #eee;
+  padding: 16px 0;
+  text-align: left;
+}
+
+.heading{
+  text-align: center;
+  margin: 20px 0;
+}
+
+.usage-rules__list{
+  padding-left: 16px;
+}
+
+.usage-rules__headline{
+  text-align: center;
+}
+
+/* Larger than phone */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  /* Re-overiding the width 100% declaration to match size of % based container */
+  .container {
+    width: 80%;
+  }
 }
