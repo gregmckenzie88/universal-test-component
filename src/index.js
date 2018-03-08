@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './styles/style.css';
 class MyComponent extends React.Component {
   render() {
     return (
-      <div>This is MyComponent!</div>
+      <div className="test">This is MyComponent!</div>
     );
   }
 }
