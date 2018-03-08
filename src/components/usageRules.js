@@ -16,7 +16,7 @@ class usageRules extends Component {
     return (
       <div className="usage-rules">
         <div className="container">
-          <h2 className="usage-rules__headline">USAGE RULES</h2>
+          <h2 className="usage-rules__headline">Usage Rules</h2>
           <h3>{ this.props.moduleTitle }</h3>
           { this.renderList() }
         </div>
