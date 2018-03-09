@@ -6,15 +6,28 @@ class MyComponent extends Component {
 
   showRules(){
     if (this.props.showRules) {
-      return <UsageRules moduleTitle="MyComponent" rules={[ 'Rule One', 'Rule Two' ]} />
+
+      //////////////////////////////////////////////////////
+      /// PLEASE POPULATE PROPS FOR UsageRules COMPONENT ///
+      //////////////////////////////////////////////////////
+
+      return <UsageRules
+        moduleTitle="Name of Your Component"
+        rules={[
+          'Rule One',
+          'Rule Two',
+          'Rule Three'
+        ]}
+      />
     }
   }
 
   render(){
     return (
-      <div>
+      <div style={{textAlign: 'center', borderBottom: '1px solid #eee'}}>
         { this.showRules() }
         <h1>{ this.props.text }</h1>
+        <p>Subheading Subheading Subheading Subheading Subheading </p>
       </div>
     );
   }

@@ -15,14 +15,8 @@ $ npm install universal-react-component --save
 ```js
 const MyComponent = require('universal-react-component');
 
-<MyComponent showRules={true} />
+<MyComponent showRules={true} text="Headline Example" />
 ```
-
-## Setting up a development enviornment
-
-**PUT LICENSE HERE**
-
-Copyright (c) 2018 .
 
 ## License
 

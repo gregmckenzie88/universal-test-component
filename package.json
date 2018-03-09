@@ -1,7 +1,7 @@
 {
   "name": "universal-react-component",
-  "version": "0.0.4",
-  "description": "Put a description here",
+  "version": "0.0.5",
+  "description": "Boilerplate for a React component as an NPM package",
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^15.5.4"
