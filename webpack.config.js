@@ -18,11 +18,16 @@
 //             presets: ['env']
 //           }
 //         }
-//       },
+//       }
+//       ,
 //       {
-//        test: /\.css$/,
-//        use: {
-//        loader: ‘css-loader’
+//           test: /\.css$/,
+//           include: path.resolve(__dirname, 'src', 'styles'),
+//           exclude: /(node_modules|bower_components|build)/,
+//           use: [
+//               { loader: "style-loader" },
+//               { loader: "css-loader" }
+//           ]
 //       }
 //     ]
 //   },
@@ -30,6 +35,10 @@
 //     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
 //   }
 // };
+
+
+
+
 
 var path = require('path');
 var webpack = require('webpack');
@@ -60,10 +69,20 @@ module.exports = {
                 include: path.resolve(__dirname, 'src', 'styles'),
                 exclude: /(node_modules|bower_components|build)/,
                 use: [
-                    { loader: "style-loader" },
+                    {
+                      loader: "style-loader",
+                      options: {
+                        hmr: false
+                      }
+                    },
                     { loader: "css-loader" }
                 ]
             }
+            // ,
+            // {
+            //   test: /\.css$/,
+            //   use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: [ 'css-loader' ] })
+            // }
         ]
     },
     externals: {
